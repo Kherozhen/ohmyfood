@@ -1,0 +1,36 @@
+footer {
+    background-color: $darkgray;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 10px;
+
+    .footerlogo {
+        font-family: 'Shrikhand', serif;
+        font-size: 18px;
+        color: white;
+        text-align: left;
+        margin: 0 0 0 0;
+    }
+    
+    .informations {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+        a {
+            color: white;
+            font-size: 16;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+
+            i {
+            width: 10px;
+            padding-right: 30px;
+            }
+        }
+    }
+}      

@@ -13,8 +13,14 @@ img {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.main-container {
     width: 100%;
-    margin: 0 0 0 0;
+    max-width: 375px;
 }
 
 a {
@@ -25,8 +31,8 @@ a {
 h1 {
     font-size: 24px;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: 0 0 0 0;
 }
 
@@ -41,5 +47,17 @@ h3 {
 p {
     font-size: 16px;
     text-align: center;
-    margin: 10px;
+    margin: 30px;
 }
+
+@media (min-width: 1281px) {
+
+    .main-container {
+        max-width: 1600px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+}   

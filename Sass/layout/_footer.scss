@@ -33,4 +33,19 @@ footer {
             }
         }
     }
-}      
+}   
+
+@media (min-width: 1281px) {
+
+    footer {
+        flex-direction: row-reverse;
+        gap: 100px;
+        padding-right: 50px;
+
+        .informations {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+
+}

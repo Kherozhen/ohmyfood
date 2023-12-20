@@ -16,12 +16,16 @@ header {
 .header-menu {
     display: flex;
     flex-direction: row;
-    gap: 35px;
+    gap: 40px;
     padding-top: 25px;
     padding-bottom: 15px;
+    padding-left: 20px;
 
-    .return {
-        width: 30px;
-        margin-left: 25px;
+    button {
+        border: none;
+        background-color: white;
+    }
+    i {
+        font-size: 25px;
     }
 }

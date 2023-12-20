@@ -1,15 +1,24 @@
 /* barre de recherche */
 
-.search {
+.icone_search {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    font-size: 16px;
-    background-color: #EAEAEA;
-    border : none;
-    text-align: center;
-    padding: 20px;
+    background-color: $lightgray;
+    padding-left: 112px;
+    
+    .search {
+        font-size: 16px;
+        background-color: $lightgray;
+        border : none;
+        padding: 20px;
+    }
+    
+    label {
+        align-self: center;
+    }
 }
+
+
 
 /* Le bouton rose */
 
@@ -58,8 +67,8 @@
         padding-top: 10px;
         padding-bottom: 10px;
         margin-bottom: 20px;
-        margin-left: 20px;
-        gap: 30px;
+        margin-left: 10px;
+        gap: 25px;
     
         .number {
             align-self: center;
@@ -75,6 +84,15 @@
             position: relative;
             left: -7px;
             
+        }
+
+        .icone {
+            align-self: center;
+            color: $darkgray;
+        }
+
+        .icone-purple {
+            color: $primary-color;
         }
     }
 }
@@ -96,8 +114,8 @@
         margin-right: 10px;
         
         .new {
-            color: #008766;
-            background-color: #99E2D0;
+            color: $darkgreen;
+            background-color: $lightgreen;
             width: 80px;
             border-radius: 10px;
             padding-top: 10px;
@@ -158,6 +176,10 @@
             object-fit: cover;
 
         }
+        .card {
+            display: flex;
+            justify-content: space-between;
+        }
 
         .cardtxt {
             display: flex;
@@ -166,6 +188,12 @@
             padding-top: 20px;
             padding-left: 20px;   
             padding-bottom: 20px;
+        }
+        
+        i {
+            font-size: 20px;
+            align-self: center;
+            padding-right: 30px;
         }
     }
 }

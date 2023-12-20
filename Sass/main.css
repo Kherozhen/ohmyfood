@@ -13,13 +13,17 @@ header .headerlogo {
 .header-menu {
   display: flex;
   flex-direction: row;
-  gap: 35px;
+  gap: 40px;
   padding-top: 25px;
   padding-bottom: 15px;
+  padding-left: 20px;
 }
-.header-menu .return {
-  width: 30px;
-  margin-left: 25px;
+.header-menu button {
+  border: none;
+  background-color: white;
+}
+.header-menu i {
+  font-size: 25px;
 }
 
 footer {
@@ -51,8 +55,14 @@ footer .informations a {
   flex-direction: row;
 }
 footer .informations a i {
-  width: 10px;
-  padding-right: 30px;
+  font-size: 10px;
+  padding-right: 5px;
+  align-self: center;
+}
+footer .informations a i.rotate {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -4px;
 }
 
 @media (min-width: 1281px) {
@@ -67,15 +77,20 @@ footer .informations a i {
   }
 }
 /* barre de recherche */
-.search {
+.icone_search {
   display: flex;
-  flex-direction: row;
   width: 100%;
+  background-color: #EAEAEA;
+  padding-left: 112px;
+}
+.icone_search .search {
   font-size: 16px;
   background-color: #EAEAEA;
   border: none;
-  text-align: center;
   padding: 20px;
+}
+.icone_search label {
+  align-self: center;
 }
 
 /* Le bouton rose */
@@ -118,8 +133,8 @@ footer .informations a i {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  margin-left: 20px;
-  gap: 30px;
+  margin-left: 10px;
+  gap: 25px;
 }
 .fonctionnement .buttonmenu .number {
   align-self: center;
@@ -133,6 +148,13 @@ footer .informations a i {
   padding-bottom: 3px;
   position: relative;
   left: -7px;
+}
+.fonctionnement .buttonmenu .icone {
+  align-self: center;
+  color: #353535;
+}
+.fonctionnement .buttonmenu .icone-purple {
+  color: #9356DC;
 }
 
 /* Choix restaurant */
@@ -202,6 +224,10 @@ footer .informations a i {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.restaurants a .card {
+  display: flex;
+  justify-content: space-between;
+}
 .restaurants a .cardtxt {
   display: flex;
   flex-direction: column;
@@ -209,6 +235,11 @@ footer .informations a i {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
+}
+.restaurants a i {
+  font-size: 20px;
+  align-self: center;
+  padding-right: 30px;
 }
 
 @media (min-width: 1281px) {

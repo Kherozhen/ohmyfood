@@ -28,9 +28,16 @@ footer {
             flex-direction: row;
 
             i {
-            width: 10px;
-            padding-right: 30px;
+            font-size: 10px;
+            padding-right: 5px;
+            align-self: center;
             }
+
+            i.rotate {
+                transform: rotate(-45deg);
+                position: relative;
+                    top:-4px;
+                }
         }
     }
 }   

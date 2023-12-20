@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Sass/main.css">
 </head>
 
@@ -21,7 +24,7 @@
         </header>
 
         <div>   
-            <form >
+            <form class="icone_search">
                 <label for="recherche">
                     <i class="fa-solid fa-location-dot"></i>
                 </label>
@@ -52,12 +55,12 @@
                 </article>
                 <article class="buttonmenu">
                     <span class="number number-two">2</span>
-                    <i class="fa-solid fa-list"></i>
+                    <i class="icone fa-solid fa-list"></i>
                     <h3> Composez votre menu</h3>
                 </article>
                 <article class="buttonmenu">
                     <span class="number number-three">3</span>
-                    <i class="fa-solid fa-store"></i>
+                    <i class="icone icone-purple fa-solid fa-store"></i>
                     <h3> Dégustez au restaurant</h3>
                 </article>
             </div>
@@ -73,23 +76,25 @@
                 <a href="./Menus/menu_palettedugout.html">
                     <article>
                         <img src="assets/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat">
-                        <div class="cardtxt">
-                            <h4>La palette de goût</h4>
-                            <span>Ménilmontant</span>
-                        </div>
-                        <div>
+                        <div class="card">
+                            <div class="cardtxt">
+                                <h4>La palette de goût</h4>
+                                <span>Ménilmontant</span>
+                            </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
+                            
+
                     </article>
                 </a>
                 <a href="./Menus/menu_lanoteenchantée.html">
                     <article>
                         <img src="assets/Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image d'un plat">
-                        <div class="cardtxt">
-                            <h4>La note enchantée</h4>
-                            <span>Charonne</span>
-                        </div>
-                        <div>
+                        <div class="card">
+                            <div class="cardtxt">
+                                <h4>La note enchantée</h4>
+                                <span>Charonne</span>
+                            </div>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                     </article>
@@ -97,11 +102,11 @@
                 <a href="./Menus/menu_alafrancaise.html">
                     <article>
                         <img src="assets/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image d'un plat">
-                        <div class="cardtxt">
-                            <h4>À la française</h4>
-                            <span>Cité Rouge</span>
-                        </div>
-                        <div>
+                        <div class="card">
+                            <div class="cardtxt">
+                                <h4>À la française</h4>
+                                <span>Cité Rouge</span>
+                            </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </article>
@@ -109,11 +114,11 @@
                 <a href="./Menus/menu_delicedessens.html">
                     <article>
                         <img src="assets/Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image d'un plat">
-                        <div class="cardtxt">
-                            <h4>Le délice des sens</h4>
-                            <span>Folie-Méricourt</span>
-                        </div>
-                        <div>
+                        <div class="card">
+                            <div class="cardtxt">
+                                <h4>Le délice des sens</h4>
+                                <span>Folie-Méricourt</span>
+                            </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </article>
@@ -125,11 +130,11 @@
                 <p class="footerlogo">ohmyfood</p>
             <div class="informations">
                 <a href="#">
-                    <i class="logoinfo fa-solid fa-utensils"></i>
+                    <i class="fa-solid fa-utensils"></i>
                     Proposer un restaurant
                 </a>
                 <a href="#">
-                    <i class=" logoinfo fa-light fa-handshake-angle"></i>
+                    <i class="rotate fa-solid fa-handshake"></i>
                     Devenir partenaire
                 </a>
                 <a href="#">Mentions légales</a>

@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Sass/menu.css">
 </head>
 
 <body>
     <div class="main-container">
-        <header>
+        <header class="header-menu">
             <button>
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
@@ -28,32 +31,38 @@
         </div>
 
         <section>
-            <div>
+            <div class="title">
                 <h1 class="titlemenu">Le Délice des sens</h1>
-                <i class="fa-thin fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
             </div>
             <div class="menu">
                 <!-- Entrées -->
                 <div class="choice">
                     <h2>ENTRÉES</h2>
                     <button>
-                        <h3>Tartare de thon</h3>
-                            <div class="info-price">
+                        <div class="info-price">
+                            <div class="info">
+                                <h3>Tartare de thon</h3>
                                 <p>Assaissonné au yuzu</p>
-                                <p class="price">25€</p>
+                                </div>    
+                                <p>25€</p>
                             </div>
                     </buttona>
                     <button>
-                        <h3>Bouchée de homard croustillant</h3>
                         <div class="info-price">
-                            <p>Et sa farandole de petits légumes</p>
+                            <div class="info">
+                                <h3>Bouchée de homard croustillant</h3>
+                                <p>Et sa farandole de petits légumes</p>
+                            </div>    
                             <p class="price">35€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Poulet rôti aux herbes de Provence</h3>
                         <div class="info-price">
-                            <p>Et sa crème de truffe</p>
+                            <div class="info">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <p>Et sa crème de truffe</p>
+                            </div>    
                             <p class="price">40€</p>
                         </div>
                     </button>
@@ -63,24 +72,30 @@
                 <div class="choice">
                     <h2>PLATS</h2>
                         <button>
-                            <h3>Poulet rôti aux herbes de Provence</h3>
                             <div class="info-price">
-                                <p>Et sa crème de truffe</p>
-                                <p class="price">40€</p>
+                                <div class="info">
+                                    <h3>Poulet rôti aux herbes de Provence</h3>
+                                    <p>Et sa crème de truffe</p>
+                                </div>
+                                <p>40€</p>
                             </div>
                         </button>
                         <button>
-                            <h3>Langoustine rôtie</h3>
                             <div class="info-price">
-                                <p>Et ses légumes maison</p>
-                                <p class="price">35€</p>
+                                <div class="info">
+                                    <h3>Langoustine rôtie</h3>
+                                    <p>Et ses légumes maison</p>
+                                </div>
+                                <p>35€</p>
                             </div>
                         </button>
                         <button>
-                            <h3>Côte de bœuf Angus</h3>
                             <div class="info-price">
-                                <p>Et sa purée de panais</p>
-                                <p class="price">44€</p>
+                                <div class="info">
+                                    <h3>Côte de bœuf Angus</h3>
+                                    <p>Et sa purée de panais</p>
+                                </div>    
+                                <p>44€</p>
                             </div>
                         </button>
                 </div>
@@ -89,24 +104,30 @@
                 <div class="choice">
                     <h2>DESSERTS</h2>
                         <button>
-                            <h3>Farandole de desserts</h3>
                             <div class="info-price">
-                                <p>Du chef</p>
-                                <p class="price">18€</p>
+                                <div class="info">
+                                    <h3>Farandole de desserts</h3>
+                                    <p>Du chef</p>
+                                </div>   
+                                <p>18€</p>
                             </div>
                         </button>
                         <button>
-                            <h3>Crème brulée</h3>
                             <div class="info-price">
-                                <p>Revisitée</p>
-                                <p class="price">22€</p>
+                                <div class="info">
+                                    <h3>Crème brulée</h3>
+                                    <p>Revisitée</p>
+                                </div>
+                                <p>22€</p>
                             </div>
                         </button>
                         <button>
-                            <h3>Tiramisu</h3>
                             <div class="info-price">
-                                <p>À la noisette</p>
-                                <p class="price">23€</p>
+                                <div class="info">
+                                    <h3>Tiramisu</h3>
+                                    <p>À la noisette</p>
+                                </div>
+                                <p>23€</p>
                             </div>
                         </button>
                 </div>
@@ -127,7 +148,7 @@
                     <span>Proposer un restaurant</span>
                 </a>
                 <a href="#">
-                    <i class="fa-light fa-handshake-angle"></i>
+                    <i class="rotate fa-solid fa-handshake"></i>
                     <span>Devenir partenaire</span>
                 </a>
                 <a href="#">

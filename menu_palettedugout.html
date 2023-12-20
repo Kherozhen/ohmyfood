@@ -8,14 +8,17 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="stylesheet" href="./Sass/menu.css">
 </head>
 
 <body>
     <div class="main-container">
         <header class="header-menu">
-            <button class="return">
+            <button>
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
             <div>
@@ -28,33 +31,39 @@
         </div>
 
         <section>
-            <div>
+            <div class="title">
                 <h1 class="titlemenu">La palette du goût</h1>
-                <i class="fa-thin fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
             </div>
             <div class="menu">
             <!-- Entrées -->
                 <div class="choice">
                     <h2>ENTRÉES</h2>
                     <button>
-                        <h3>Fricassé d'escargots</h3>
                         <div class="info-price">
-                            <p>Au piment d'Espelette</p>
-                            <p class="price">25€</p>
+                            <div class="info">
+                                <h3>Fricassé d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <p>25€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Foie gras de canard mi-cuit</h3>
                         <div class="info-price">
-                            <p>Et ses copeaux de truffes noires</p>
-                            <p class="price">35€</p>
+                            <div class="info">
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <p>Et ses copeaux de truffes noires</p>
+                            </div>
+                            <p>35€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Œuf au plat</h3>
                         <div class="info-price">
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
-                            <p class="price">20€</p>
+                            <div class="info">
+                                <h3>Œuf au plat</h3>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </div>    
+                            <p>20€</p>
                         </div>
                     </button>
                 </div>
@@ -63,24 +72,30 @@
                 <div class="choice">
                     <h2>PLATS</h2>
                     <button>
-                        <h3>Filet de bœuf aux herbes</h3>
                         <div class="info-price">
-                            <p>Accompagné de sa ribambelle de légumes</p>
-                            <p class="price">40€</p>
+                            <div class="info">
+                                <h3>Filet de bœuf aux herbes</h3>
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                            <p>40€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Parmentier de queue de bœuf</h3>
                         <div class="info-price">
+                            <div class="info">
+                            <h3>Parmentier de queue de bœuf</h3>
                             <p>À la truffe noire sur sa purée de panais</p>
-                            <p class="price">35€</p>
+                            </div>
+                            <p>35€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Filet de turbot</h3>
                         <div class="info-price">
-                            <p>Aux agrumes</p>
-                            <p class="price">44€</p>
+                            <div class="info">
+                                <h3>Filet de turbot</h3>
+                                <p>Aux agrumes</p>
+                            </div>
+                            <p>44€</p>
                         </div>
                     </button>
                 </div>
@@ -89,24 +104,30 @@
                 <div class="choice">
                     <h2>DESSERTS</h2>
                     <button>
-                        <h3>Paris-Brest</h3>
                         <div class="info-price">
-                            <p>Revisité</p>
-                            <p class="price">18€</p>
+                            <div class="info">
+                                <h3>Paris-Brest</h3>
+                                <p>Revisité</p>
+                            </div>
+                            <p>18€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Macaron au chocolat d'exception</h3>
                         <div class="info-price">
-                            <p>Et glace vanille de Madagascar</p>
-                            <p class="price">22€</p>
+                            <div class="info">
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <p>Et glace vanille de Madagascar</p>
+                            </div>    
+                            <p>22€</p>
                         </div>
                     </button>
                     <button>
-                        <h3>Mousse au chocolat</h3>
                         <div class="info-price">
-                            <p>Au piment d'Espelette et à la truffe noire</p>
-                            <p class="price">23€</p>
+                            <div class="info">
+                                <h3>Mousse au chocolat</h3>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>    
+                            <p>23€</p>
                         </div>
                     </button>
                 </div>
@@ -123,11 +144,11 @@
             <p class="footerlogo">ohmyfood</p>
             <div class="informations">
                 <a href="#">
-                    <i class="fa-solid fa-utensils"></i>
+                    <i class="rotate fa-solid fa-utensils"></i>
                     <span>Proposer un restaurant</span>
                 </a>
                 <a href="#">
-                    <i class="fa-light fa-handshake-angle"></i>
+                    <i class="fa-solid fa-handshake"></i>
                     <span>Devenir partenaire</span>
                 </a>
                 <a href="#">

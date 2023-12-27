@@ -2,23 +2,21 @@
 
 .icone_search {
     display: flex;
-    width: 100%;
+    justify-content: center;
     background-color: $lightgray;
-    padding-left: 112px;
     
     .search {
         font-size: 16px;
         background-color: $lightgray;
         border : none;
-        padding: 20px;
+        text-align: center;
+        padding: 20px 0;
     }
     
-    label {
+    span {
         align-self: center;
     }
 }
-
-
 
 /* Le bouton rose */
 
@@ -53,46 +51,47 @@
 /* Partie fonctionnement */
 
 .fonctionnement {
-    padding-left: 20px;
     margin-bottom: 70px;
 
-    .buttonmenu {
-        display: flex;
-        text-align: center;
-        font-size: 24px;
-        width: 322.49px;
-        background-color: $background;
-        border-radius: 25px;
-        @include buttonfonctionshadow;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        margin-left: 10px;
-        gap: 25px;
-    
-        .number {
-            align-self: center;
-            font-size: 14px;
-            color : white;
-            border-radius : 50%;
-            background-color: $primary-color;
-            padding-left: 8px;
-            padding-right: 8px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-    
-            position: relative;
-            left: -7px;
-            
-        }
+    .fonctionnementdesktop {
+        padding: 20px;
 
-        .icone {
-            align-self: center;
-            color: $darkgray;
-        }
+        .buttonmenu {
+            display: flex;
+            text-align: center;
+            font-size: 24px;
+            width: 100%;
+            background-color: $background;
+            border-radius: 25px;
+            @include buttonfonctionshadow;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            gap: 25px;
+        
+            .number {
+                align-self: center;
+                font-size: 14px;
+                color : white;
+                border-radius : 50%;
+                background-color: $primary-color;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+        
+                position: relative;
+                left: -7px;
+            }
 
-        .icone-purple {
-            color: $primary-color;
+            .icone {
+                align-self: center;
+                color: $darkgray;
+            }
+
+            .icone-purple {
+                color: $primary-color;
+            }
         }
     }
 }
@@ -105,145 +104,87 @@
     gap: 10px;
     background-color: $background;
     padding-bottom: 50px;
-    margin-bottom: 0px;
+    margin: 0px;
     
-    .test {
+    a {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 10px;
-        
+        flex-direction: column;
+        background-color: white;
+        margin: 20px;
+        border-radius: 20px;
+
+        @include restaurant;
+
+        position: relative;
+
+        img {
+            object-fit: cover;
+            height: 180px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            
+        }
+
         .new {
             color: $darkgreen;
             background-color: $lightgreen;
-            width: 80px;
+            font-size: 14px;
             border-radius: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 10px;
 
             @include shadow-new;
 
             text-align-last: center;
 
-            position: relative;
-                left: 96px;
-                top: 78px;
+            position: absolute;
+                right: 15px;
+                top: 15px;
         }
 
-        .new-two {
-            left: -19px;
-            top: 359px;   
-        }
-    }
-
-    .restaurantsdesktop {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    h2 {
-        padding-left: 20px;
-    }
-
-    h4 {
-        font-size: 18px;
-        margin: 0 0 0 0;
-    }
-
-    span {
-        font-size: 17px;
-        margin: 0 0 0 0;
-    }
-
-    a {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 340px;
-    height: 251px;
-    border-radius: 20px;
-
-    @include restaurant;
-    
-    margin-left: 20px;
-
-        img {
-            max-width: 370px;
-            max-height: 170px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            object-fit: cover;
-
-        }
         .card {
             display: flex;
             justify-content: space-between;
-        }
 
-        .cardtxt {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding-top: 20px;
-            padding-left: 20px;   
-            padding-bottom: 20px;
-        }
-        
-        i {
-            font-size: 20px;
-            align-self: center;
-            padding-right: 30px;
-        }
+            .cardtxt {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding-top: 10px;
+                padding-left: 20px;   
+                padding-bottom: 10px;
+
+                h4 {
+                    font-size: 18px;
+                    margin: 0 0 0 0;
+                }
+            }
+
+            i {
+                font-size: 20px;
+                align-self: center;
+                padding-right: 30px;
+            }
+        } 
     }
 }
 
-@media (min-width: 1281px) {
+@media screen and (min-width: 1025px) {
 
-    .fonctionnement{
-        padding-left: 250px;
     
-
-        .fonctionnementdesktop {
-            width: 90%;
-            display: flex;
-            flex-direction: row;
-        }
+    .fonctionnementdesktop {
+        display: flex;
+        gap: 30px;
     }
 
     .restaurants {
-        padding-left: 250px;
-    
-        h2 {
-            padding: 0px;
-        }
-
         a {
             width: 490px;
             height: 251px;
         }
-
-        img {
-            width: 490px;
-            height: 251px;
-        }
         .restaurantsdesktop {
-            flex-direction: row;
-            flex-wrap: wrap;
-        } 
-        .test{
-
-            .new {
-                left: -225px;
-            }
-            .new-two {
-                left: -288px;
-                top: 78px;   
-            }
-        }
-    }
-
-   
-
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }  
+    }       
 }
     

@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 .titlemenu{
     font-family: 'Shrikhand', serif;
@@ -15,14 +15,7 @@ img {
 }
 
 body {
-    display: flex;
-    justify-content: center;
     margin: 0;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 375px;
 }
 
 a {
@@ -40,6 +33,7 @@ h1 {
 
 h2 {
     font-size: 24px;
+    padding-left: 20px;
 }
 
 h3 {
@@ -49,13 +43,15 @@ h3 {
 p {
     font-size: 16px;
     text-align: center;
-    margin: 30px;
+    margin: 30px 20px;
 }
 
-@media (min-width: 1281px) {
+@media screen and (min-width: 1025px) {
 
-    .main-container {
-        max-width: 1600px;
+    .container {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {

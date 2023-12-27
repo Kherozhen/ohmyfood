@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.3);
 }
 header .headerlogo {
   width: 197px;
@@ -13,17 +13,32 @@ header .headerlogo {
 .header-menu {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 60px;
   padding-top: 25px;
   padding-bottom: 15px;
-  padding-left: 20px;
+  position: relative;
+  z-index: 3;
+  background-color: white;
 }
 .header-menu button {
+  padding-left: 20px;
   border: none;
   background-color: white;
 }
 .header-menu i {
   font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .header-menu .logo {
+    position: absolute;
+    left: 37%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-menu .logo {
+    position: absolute;
+    left: 42%;
+  }
 }
 
 footer {
@@ -49,7 +64,7 @@ footer .informations {
 }
 footer .informations a {
   color: white;
-  font-size: 16;
+  font-size: 16px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -77,7 +92,7 @@ footer .informations a i.rotate {
   }
 }
 * {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 .titlemenu {
@@ -95,14 +110,7 @@ img {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   margin: 0;
-}
-
-.main-container {
-  width: 100%;
-  max-width: 375px;
 }
 
 a {
@@ -120,6 +128,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  padding-left: 20px;
 }
 
 h3 {
@@ -129,22 +138,19 @@ h3 {
 p {
   font-size: 16px;
   text-align: center;
-  margin: 30px;
+  margin: 30px 20px;
 }
 
-@media (min-width: 1281px) {
-  .main-container {
-    max-width: 1600px;
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
   h1 {
     font-size: 40px;
   }
 }
-section {
-  background-color: #F6F6F6;
-  padding-top: 20px;
-}
-
 .title {
   display: flex;
   justify-content: space-between;
@@ -155,19 +161,82 @@ section {
   align-self: center;
 }
 
-.menu {
-  padding-left: 15px;
+body {
+  position: relative;
 }
-.menu .choice {
+body .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+@media screen and (min-width: 1025px) {
+  body .image img {
+    width: 100%;
+    height: 380px;
+  }
+}
+body .image img .imageverticale {
+  position: absolute;
+  top: -100px;
+}
+@media screen and (min-width: 1025px) {
+  body .image img .imageverticale {
+    top: -350px;
+  }
+}
+body .containertwo {
+  width: 100%;
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  z-index: 2;
+}
+@media screen and (min-width: 1025px) {
+  body .containertwo {
+    top: 428px;
+  }
+}
+body .containertwo section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding-top: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+@media screen and (min-width: 1025px) {
+  body .containertwo section {
+    width: 1055px;
+    margin: auto;
+  }
+}
+body .containertwo section .choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
-.menu h2 {
-  font-size: 16px;
-  font-weight: lighter;
+@media screen and (min-width: 1025px) {
+  body .containertwo section .choice {
+    width: 634px;
+  }
 }
-.menu button {
+body .containertwo section h2 {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 0px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+body .containertwo section hr {
+  border: 2px solid #99E2D0;
+  width: 40px;
+  text-align: left;
+  margin: 0;
+}
+body .containertwo section button {
   background-color: white;
   width: 349px;
   height: 69px;
@@ -179,36 +248,45 @@ section {
   gap: 7px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
 }
-.menu button .info-price {
+@media screen and (min-width: 1025px) {
+  body .containertwo section button {
+    width: 100%;
+  }
+}
+body .containertwo section button .info-price {
   width: 349px;
   display: flex;
   justify-content: space-between;
 }
-.menu button .info-price .info {
+@media screen and (min-width: 1025px) {
+  body .containertwo section button .info-price {
+    width: 100%;
+  }
+}
+body .containertwo section button .info-price .info {
   display: flex;
   flex-direction: column;
   align-self: center;
   gap: 5px;
 }
-.menu button .info-price .info h3 {
+body .containertwo section button .info-price .info h3 {
   font-size: 18px;
   text-align: left;
   padding-left: 5px;
   margin: 0;
 }
-.menu button .info-price .info p {
+body .containertwo section button .info-price .info p {
   text-align: left;
   font-size: 15px;
+  font-weight: 300;
   padding: 5px;
   margin: 0px;
 }
-
-.thepinkbutton {
-  text-align: center;
+body .containertwo section .thepinkbutton {
   padding-top: 40px;
   padding-bottom: 20px;
 }
-.thepinkbutton button {
+body .containertwo section .thepinkbutton button {
   width: 218px;
   height: 50px;
   background: linear-gradient(360deg, rgb(147, 86, 220), rgb(255, 121, 218));
@@ -217,7 +295,8 @@ section {
   margin-bottom: 30px;
   box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.2);
 }
-.thepinkbutton button span {
+body .containertwo section .thepinkbutton button span {
   font-size: 16px;
   color: white;
+  align-self: center;
 }/*# sourceMappingURL=menu.css.map */

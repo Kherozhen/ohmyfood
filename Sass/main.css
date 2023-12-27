@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.3);
 }
 header .headerlogo {
   width: 197px;
@@ -13,17 +13,32 @@ header .headerlogo {
 .header-menu {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 60px;
   padding-top: 25px;
   padding-bottom: 15px;
-  padding-left: 20px;
+  position: relative;
+  z-index: 3;
+  background-color: white;
 }
 .header-menu button {
+  padding-left: 20px;
   border: none;
   background-color: white;
 }
 .header-menu i {
   font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .header-menu .logo {
+    position: absolute;
+    left: 37%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-menu .logo {
+    position: absolute;
+    left: 42%;
+  }
 }
 
 footer {
@@ -49,7 +64,7 @@ footer .informations {
 }
 footer .informations a {
   color: white;
-  font-size: 16;
+  font-size: 16px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -79,17 +94,17 @@ footer .informations a i.rotate {
 /* barre de recherche */
 .icone_search {
   display: flex;
-  width: 100%;
+  justify-content: center;
   background-color: #EAEAEA;
-  padding-left: 112px;
 }
 .icone_search .search {
   font-size: 16px;
   background-color: #EAEAEA;
   border: none;
-  padding: 20px;
+  text-align: center;
+  padding: 20px 0;
 }
-.icone_search label {
+.icone_search span {
   align-self: center;
 }
 
@@ -119,24 +134,25 @@ footer .informations a i.rotate {
 
 /* Partie fonctionnement */
 .fonctionnement {
-  padding-left: 20px;
   margin-bottom: 70px;
 }
-.fonctionnement .buttonmenu {
+.fonctionnement .fonctionnementdesktop {
+  padding: 20px;
+}
+.fonctionnement .fonctionnementdesktop .buttonmenu {
   display: flex;
   text-align: center;
   font-size: 24px;
-  width: 322.49px;
+  width: 100%;
   background-color: #F6F6F6;
   border-radius: 25px;
   box-shadow: 7px 8px 9px rgba(0, 0, 0, 0.08);
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  margin-left: 10px;
   gap: 25px;
 }
-.fonctionnement .buttonmenu .number {
+.fonctionnement .fonctionnementdesktop .buttonmenu .number {
   align-self: center;
   font-size: 14px;
   color: white;
@@ -149,11 +165,11 @@ footer .informations a i.rotate {
   position: relative;
   left: -7px;
 }
-.fonctionnement .buttonmenu .icone {
+.fonctionnement .fonctionnementdesktop .buttonmenu .icone {
   align-self: center;
   color: #353535;
 }
-.fonctionnement .buttonmenu .icone-purple {
+.fonctionnement .fonctionnementdesktop .buttonmenu .icone-purple {
   color: #9356DC;
 }
 
@@ -164,121 +180,75 @@ footer .informations a i.rotate {
   gap: 10px;
   background-color: #F6F6F6;
   padding-bottom: 50px;
-  margin-bottom: 0px;
-}
-.restaurants .test {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 10px;
-}
-.restaurants .test .new {
-  color: #008766;
-  background-color: #99E2D0;
-  width: 80px;
-  border-radius: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.08);
-  -moz-text-align-last: center;
-       text-align-last: center;
-  position: relative;
-  left: 96px;
-  top: 78px;
-}
-.restaurants .test .new-two {
-  left: -19px;
-  top: 359px;
-}
-.restaurants .restaurantsdesktop {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.restaurants h2 {
-  padding-left: 20px;
-}
-.restaurants h4 {
-  font-size: 18px;
-  margin: 0 0 0 0;
-}
-.restaurants span {
-  font-size: 17px;
-  margin: 0 0 0 0;
+  margin: 0px;
 }
 .restaurants a {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 340px;
-  height: 251px;
+  margin: 20px;
   border-radius: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
-  margin-left: 20px;
+  position: relative;
 }
 .restaurants a img {
-  max-width: 370px;
-  max-height: 170px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 180px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.restaurants a .new {
+  color: #008766;
+  background-color: #99E2D0;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.08);
+  -moz-text-align-last: center;
+       text-align-last: center;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 .restaurants a .card {
   display: flex;
   justify-content: space-between;
 }
-.restaurants a .cardtxt {
+.restaurants a .card .cardtxt {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-.restaurants a i {
+.restaurants a .card .cardtxt h4 {
+  font-size: 18px;
+  margin: 0 0 0 0;
+}
+.restaurants a .card i {
   font-size: 20px;
   align-self: center;
   padding-right: 30px;
 }
 
-@media (min-width: 1281px) {
-  .fonctionnement {
-    padding-left: 250px;
-  }
-  .fonctionnement .fonctionnementdesktop {
-    width: 90%;
+@media screen and (min-width: 1025px) {
+  .fonctionnementdesktop {
     display: flex;
-    flex-direction: row;
-  }
-  .restaurants {
-    padding-left: 250px;
-  }
-  .restaurants h2 {
-    padding: 0px;
+    gap: 30px;
   }
   .restaurants a {
     width: 490px;
     height: 251px;
   }
-  .restaurants img {
-    width: 490px;
-    height: 251px;
-  }
   .restaurants .restaurantsdesktop {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .restaurants .test .new {
-    left: -225px;
-  }
-  .restaurants .test .new-two {
-    left: -288px;
-    top: 78px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 * {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 .titlemenu {
@@ -296,14 +266,7 @@ img {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   margin: 0;
-}
-
-.main-container {
-  width: 100%;
-  max-width: 375px;
 }
 
 a {
@@ -321,6 +284,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  padding-left: 20px;
 }
 
 h3 {
@@ -330,12 +294,14 @@ h3 {
 p {
   font-size: 16px;
   text-align: center;
-  margin: 30px;
+  margin: 30px 20px;
 }
 
-@media (min-width: 1281px) {
-  .main-container {
-    max-width: 1600px;
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
   h1 {
     font-size: 40px;

@@ -16,16 +16,32 @@ header {
 .header-menu {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 60px;
     padding-top: 25px;
     padding-bottom: 15px;
-    padding-left: 20px;
+    
+    position : relative;
+    z-index: 3;
+    background-color: white;
 
     button {
+        padding-left: 20px;
         border: none;
         background-color: white;
     }
+
     i {
         font-size: 25px;
+    }
+
+    .logo {
+        @media screen and (min-width: 768px) {
+            position: absolute;
+                left: 37%; 
+        }
+        @media screen and (min-width: 1025px) {
+            position: absolute;
+                left: 42%; 
+        }
     }
 }

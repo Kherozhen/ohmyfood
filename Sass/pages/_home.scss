@@ -51,7 +51,7 @@
 /* Partie fonctionnement */
 
 .fonctionnement {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 
     .fonctionnementdesktop {
         padding: 20px;
@@ -99,22 +99,16 @@
 /* Choix restaurant */
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
     background-color: $background;
     padding-bottom: 50px;
-    margin: 0px;
-    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
     a {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        margin: 20px;
-        border-radius: 20px;
-
+        width: 100%;
         @include restaurant;
-
         position: relative;
 
         img {
@@ -141,13 +135,21 @@
                 top: 15px;
         }
 
-        .card {
+        article {
             display: flex;
-            justify-content: space-between;
-
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            
+            .card {
+                display: flex;
+                justify-content: space-between;
+            }
             .cardtxt {
                 display: flex;
                 flex-direction: column;
+                
                 gap: 5px;
                 padding-top: 10px;
                 padding-left: 20px;   
@@ -177,13 +179,11 @@
     }
 
     .restaurants {
-        a {
-            width: 490px;
-            height: 251px;
-        }
+    
         .restaurantsdesktop {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }  
     }       
 }

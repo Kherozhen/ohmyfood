@@ -17,11 +17,13 @@
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <header class="header-menu">
-            <button>
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
+            <div>
+                <a href="./index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div> 
             <div>
                 <img src="assets/Images_et_textes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" id="logo">
             </div>
@@ -35,106 +37,136 @@
         <section>
             <div class="title">
                 <h1 class="titlemenu">La palette du goût</h1>
-                <i class="fa-regular fa-heart"></i>
+                <div class="heart">
+                    <i class="dontlike fa-regular fa-heart"></i>
+                    <i class="like fa-solid fa-heart"></i>
+                </div>
             </div>
             <div class="menu">
             <!-- Entrées -->
-                <div class="choice">
+                <div class="choice entrees">
                     <h2>ENTRÉES</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">25€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Fricassé d'escargots</h3>
                             <div class="info">
-                                <h3>Fricassé d'escargots</h3>
                                 <p>Au piment d'Espelette</p>
                             </div>
-                            <p>25€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Foie gras de canard mi-cuit</h3>
                             <div class="info">
-                                <h3>Foie gras de canard mi-cuit</h3>
                                 <p>Et ses copeaux de truffes noires</p>
                             </div>
-                            <p>35€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">20€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Œuf au plat</h3>
                             <div class="info">
-                                <h3>Œuf au plat</h3>
                                 <p>Assaisonné à la truffe sur lit de caviar</p>
                             </div>    
-                            <p>20€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Plats -->
-                <div class="choice">
+                <div class="choice plats">
                     <h2>PLATS</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">40€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Filet de bœuf aux herbes</h3>
                             <div class="info">
-                                <h3>Filet de bœuf aux herbes</h3>
                                 <p>Accompagné de sa ribambelle de légumes</p>
                             </div>
-                            <p>40€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
-                            <div class="info">
                             <h3>Parmentier de queue de bœuf</h3>
-                            <p>À la truffe noire sur sa purée de panais</p>
-                            </div>
-                            <p>35€</p>
-                        </div>
-                    </button>
-                    <button>
-                        <div class="info-price">
                             <div class="info">
-                                <h3>Filet de turbot</h3>
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">44€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="info-price">
+                            <h3>Filet de turbot</h3>
+                            <div class="info">
                                 <p>Aux agrumes</p>
                             </div>
-                            <p>44€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Desserts -->
-                <div class="choice">
+                <div class="choice desserts">
                     <h2>DESSERTS</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">18€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Paris-Brest</h3>
                             <div class="info">
-                                <h3>Paris-Brest</h3>
                                 <p>Revisité</p>
                             </div>
-                            <p>18€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">22€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Macaron au chocolat d'exception</h3>
                             <div class="info">
-                                <h3>Macaron au chocolat d'exception</h3>
                                 <p>Et glace vanille de Madagascar</p>
                             </div>    
-                            <p>22€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">23€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Mousse au chocolat</h3>
                             <div class="info">
-                                <h3>Mousse au chocolat</h3>
                                 <p>Au piment d'Espelette et à la truffe noire</p>
                             </div>    
-                            <p>23€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
             </div>
             <!-- Bouton commander -->

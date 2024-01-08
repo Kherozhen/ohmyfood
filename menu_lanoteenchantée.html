@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <header class="header-menu">
             <div>
-                <button>
+                <a href="./index.html">
                     <i class="fa-solid fa-arrow-left"></i>
-                </button>
-            </div>
+                </a>
+            </div> 
             <div class="logo">
                 <img src="assets/Images_et_textes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" id="logo">
             </div>
@@ -39,115 +39,148 @@
         <section>
             <div class="title">
                 <h1 class="titlemenu">La note enchantée</h1>
-                <i class="fa-regular fa-heart"></i>
+                <div class="heart">
+                    <i class="dontlike fa-regular fa-heart"></i>
+                    <i class="like fa-solid fa-heart"></i>
+                </div>
             </div>
             <div class="menu">
                 <!-- Entrées -->
-                <div class="choice">
+                <div class="choice entrees">
                     <h2>ENTRÉES</h2>
                     <hr/>
-                    <button>
-                        <div class="info-price">
-                            <div class="info">
-                                <h3>Ravioles de foie gras</h3>
-                                <p>Accompagnées de leur crème à la truffe</p>
-                            </div>    
-                            <p>25€</p>
+                    <article>
+                        <div class="check">
+                            <p class="price">25€</p>
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button>
                         <div class="info-price">
+                            <h3>Ravioles de foie gras</h3>
                             <div class="info">
-                                <h3>Caviar osciètre</h3>
+                                <p>Accompagnées de leur crème à la truffe</p>
+                            </div>  
+                        </div>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="info-price">
+                            <h3>Caviar osciètre</h3>
+                            <div class="info">
                                 <p>Sur blini à la farine de blé noir</p>
                             </div>
-                            <p>35€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">20€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Homard et espuma de potiron</h3>
                             <div class="info">
-                                <h3>Homard et espuma de potiron</h3>
                                 <p>Marinés aux zestes d'orange</p>
                             </div>    
-                            <p>20€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Foie gras de canard cuit entier</h3>
                             <div class="info">
-                                <h3>Foie gras de canard cuit entier</h3>
                                 <p>Confiture de figue et pain toasté</p>
                             </div>
-                            <p>35€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Plats -->
-                <div class="choice">
+                <div class="choice plats">
                     <h2>PLATS</h2>
                     <hr/>
-                    <button>
-                        <div class="info-price">
-                            <div class="info">
-                                <h3>Noix de coquilles Saint-Jacques</h3>
-                                <p>Sur lit de purée de céleri-rave</p>
-                            </div>
-                            <p>40€</p>
+                    <article>
+                        <div class="check">
+                            <p class="price">40€</p>
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button>
                         <div class="info-price">
+                            <h3>Noix de coquilles Saint-Jacques</h3>
                             <div class="info">
-                                <h3>Langoustine poêlée</h3>
+                                <p>Sur lit de purée de céleri-rave</p>
+                            </div> 
+                        </div>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="info-price">
+                            <h3>Langoustine poêlée</h3>
+                            <div class="info">
                                 <p>Purée de patate douce</p>
                             </div>
-                            <p>35€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">45€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Mijoté de queue de bœuf</h3>
                             <div class="info">
-                                <h3>Mijoté de queue de bœuf</h3>
                                 <p>Et riz sauvage aux zestes de citron</p>
                             </div>
-                            <p class="price">45€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Desserts -->
-                <div class="choice">
+                <div class="choice desserts">
                     <h2>DESSERTS</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">18€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Macaron noisette et chocolat</h3>
                             <div class="info">
-                                <h3>Macaron noisette et chocolat</h3>
                                 <p>glace au caramel brun et sel de Guérande</p>
                             </div>    
-                            <p>18€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">22€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Baba au rhum revisité</h3>
                             <div class="info">
-                                <h3>Baba au rhum revisité</h3>
                                 <p>Avec son coulis de citron</p>
                             </div>
-                            <p class="price">22€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">23€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Tarte au citron meringuée</h3>
                             <div class="info">
-                                <h3>Tarte au citron meringuée</h3>
                                 <p>Déstructurée</p>
                             </div>    
-                            <p>23€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
             </div>
             <!-- Bouton commander -->

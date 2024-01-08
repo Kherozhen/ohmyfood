@@ -17,126 +17,160 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header-menu">
-            <button>
+    <header class="header-menu">
+        <div>
+            <a href="./index.html">
                 <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <div>
-                <img src="assets/Images_et_textes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" id="logo">
-            </div>
-        </header>
-
-            <div class="image">
-                <img src="assets/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat">
-            </div>
+            </a>
+        </div>    
+        <div>
+            <img src="assets/Images_et_textes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" id="logo">
+        </div>
+    </header>
+    <div class="image">
+        <img src="assets/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat">
     </div>
+
     <div class="containertwo">
-        <section>
+        <section>  
             <div class="title">
                 <h1 class="titlemenu">À la française</h1>
-                <i class="fa-regular fa-heart"></i>
+                <div class="heart">
+                    <i class="dontlike fa-regular fa-heart"></i>
+                    <i class="like fa-solid fa-heart"></i>
+                </div>
             </div>
+
             <div class="menu">
+
                 <!-- Entrées -->
-                <div class="choice">
+                <div class="choice entrees">
                     <h2>ENTRÉES</h2>
                     <hr/>
-                    <button>
-                        <div class="info-price">
-                            <div class="info">
-                                <h3>Tartare de poulpe acidulé</h3>
-                                <p>Aux zestes d'orange</p> 
-                            </div>
-                            <p>25€</p>
+                    <article>
+                        <div class="check">
+                            <p class="price">25€</p>
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button>
                         <div class="info-price">
+                            <h3>Tartare de poulpe acidulé</h3>
                             <div class="info">
-                                <h3>Velouté de légumes d'antan</h3>
+                                <p>Aux zestes d'orange</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="info-price">
+                            <h3>Velouté de légumes d'antan</h3>
+                            <div class="info">
                                 <p>Carotte, panais, topinambour</p>
                             </div>
-                            <p>35€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">20€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Soupe à l'oignon</h3>
                             <div class="info">
-                                <h3>Soupe à l'oignon</h3>
                                 <p>Revisité</p>
                             </div>
-                            <p>20€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Plats -->
-                <div class="choice">
+            
+                <div class="choice plats">
                     <h2>PLATS</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">40€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Coquille Saint-Jacques</h3>
                             <div class="info">
-                                <h3>Coquille Saint-Jacques</h3>
                                 <p>Accompagné d'une purée de panais</p>
                             </div>    
-                            <p>40€</p>
                         </div>
-                    </button>
-                    <button>
-                        <div class="info-price">
-                            <div class="info">
-                                <h3>Magret de canard</h3>
-                                <p>Et parmentier de pommes de terre</p>
-                            </div>    
-                            <p>35€</p>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">35€</p>
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                    </button>
-                    <button>
                         <div class="info-price">
+                            <h3>Magret de canard</h3>
                             <div class="info">
-                                <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                                 <p>Et parmentier de pommes de terre</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">44€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="info-price">
+                            <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                            <div class="info">
                                 <p>Sur son lit de gnocchis aux légumes</p>
                             </div>
-                            <p>44€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
 
                 <!-- Desserts -->
-                <div class="choice">
+                <div class="choice desserts">
                     <h2>DESSERTS</h2>
                     <hr/>
-                    <button>
+                    <article>
+                        <div class="check">
+                            <p class="price">18€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Pétales de violettes glacées</h3>
                             <div class="info">
-                                <h3>Pétales de violettes glacées</h3>
                                 <p>Et purée de noisettes</p>
                             </div>
-                            <p>18€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">22€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Fondant au chocolat</h3>
                             <div class="info">
-                                <h3>Fondant au chocolat</h3>
                                 <p>Revisité</p>
                             </div>
-                            <p>22€</p>
                         </div>
-                    </button>
-                    <button>
+                    </article>
+                    <article>
+                        <div class="check">
+                            <p class="price">23€</p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <div class="info-price">
+                            <h3>Millefeuille croustillant</h3>
                             <div class="info">
-                                <h3>Millefeuille croustillant</h3>
                                 <p>Myrtilles et pâte d'amande</p>
                             </div>
-                            <p>23€</p>
                         </div>
-                    </button>
+                    </article>
                 </div>
             </div>
+
             <!-- Bouton commander -->
             <div class="thepinkbutton">
                 <button>

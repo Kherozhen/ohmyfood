@@ -3,9 +3,9 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
-    /* animation du loader pour qu'il reste que 3s */
+    /* animation du loader pour qu'il reste que 1s */
     animation: appear;            /* on appelle la keyframes*/
     animation-delay: 3s;          /* on met le temps de l'animation */
     animation-fill-mode: both;    /*cette commande permet d'activer l'animation*/
@@ -45,11 +45,11 @@
     }
 }
 
-/* keyframes pour faire disparaitre le loader au bout de 3s*/
+/* keyframes pour faire disparaitre le loader au bout de 1s*/
 
 @keyframes appear {
     100% {
         opacity: 0;
-        z-index: 0;
+        z-index: -1;
     }
 }

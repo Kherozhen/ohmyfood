@@ -29,11 +29,19 @@ h1 {
     padding-left: 30px;
     padding-right: 30px;
     margin: 0 0 0 0;
+
+    @media screen and (min-width: 1025px) {
+        font-size: 40px;
+    }
 }
 
 h2 {
     font-size: 24px;
     padding-left: 20px;
+
+    @media screen and (min-width: 1025px) {
+        padding-left: 0px;
+    }
 }
 
 h3 {
@@ -46,16 +54,10 @@ p {
     margin: 30px 20px;
 }
 
-@media screen and (min-width: 1025px) {
-
-    .container {
+.container {
+    @media screen and (min-width: 1025px) {
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
     }
-
-    h1 {
-        font-size: 40px;
-    }
-
 }   

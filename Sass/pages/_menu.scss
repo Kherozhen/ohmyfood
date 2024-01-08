@@ -1,14 +1,3 @@
-.title {
-    display:flex;
-    justify-content: space-between;
-
-    i {
-        font-size: 20px;
-        padding-right: 30px;
-        align-self: center;
-    }
-}
-
 body {
     position: relative;
 
@@ -34,7 +23,7 @@ body {
             }
         }
     }
-
+    
     .containertwo {
         width: 100%;
         position: absolute;
@@ -49,25 +38,59 @@ body {
         section {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
             background-color: $background;
             padding-top: 30px;
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
 
             @media screen and (min-width: 1025px) {
-            width: 1055px;
-            margin:auto;
+                width: 1055px;
+                align-items: center;
+                margin: auto;
             }
 
-            .choice {
+            .title {
+                position : relative;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 10px;
+                justify-content: space-between;
 
-                @media screen and (min-width: 1025px){
-                    width: 634px;
+                @media screen and (min-width: 499px) {
+                    display: flex;
+                    justify-content: center;
+                }
+        
+                h1{
+                    font-size: 28px;
+                }
+            
+                .heart {
+                    position: absolute;
+                        right: 40px;
+                        bottom: 30px;
+
+                        @media screen and (min-width: 1025px) {
+                            right: 0px;
+                        }
+                    
+                    i {
+                        font-size: 22px;
+                        padding-right: 30px;
+                        position: absolute;
+                    }
+
+                    .like {
+                    opacity: 0; 
+                    transition: all 1s;
+            
+                        &:hover {
+                            opacity: 1;
+                            color: transparent;
+                            background-image: $heart;
+                            background-clip: text;
+                        }   
+                    }
                 }
             }
 
@@ -84,70 +107,143 @@ body {
                 width: 40px;
                 text-align: left;
                 margin: 0;
+                margin-bottom: 10px;
             }
 
-            button {
-                background-color: white;
-                width: 349px;
-                height: 69px;
-                border: none;
-                border-radius: 20px;
+            .menu {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                gap: 7px;
-
-                @include restaurant;
-
+    
                 @media screen and (min-width: 1025px){
-                    width: 100%;
+                    width: 634px;
                 }
 
-                .info-price {
-                    width: 349px;
-                    display: flex;
-                    justify-content: space-between;
+                .choice {           //animation entrées plats desserts//
+                 opacity: 0;
+                 animation: apparition;
+                 animation-duration: 1s;
+                 animation-fill-mode: both;
+                }
+                .entrees {
+                    animation-delay: 0.5s; 
+                }
+                .plats {
+                    animation-delay: 1s; 
+                }
+                .desserts {
+                    animation-delay: 1.5s; 
+                }
 
-                    @media screen and (min-width: 1025px) {
-                        width: 100%;
-                    }
-
-                    .info {
+                    article {
                         display: flex;
-                        flex-direction: column;
-                        align-self: center;
-                        gap: 5px;
-                    
-                        h3 {
-                            font-size: 18px;
-                            text-align: left;
-                            padding-left: 5px;
-                            margin: 0;
-                        }    
-                        p {
-                            text-align: left;
-                            font-size: 15px;
-                            font-weight: 300;
-                            padding: 5px;
-                            margin: 0px;
-                        }
-                    }
-                } 
-            }
+                        align-items: center;
+                        position: relative;
+                        background-color: white;
+                        height: 69px;
+                        border: none;
+                        padding-left: 10px;
+                        border-radius: 20px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        @include restaurant;
+                        
+                        .check {
+                            display: flex;
+                            position: absolute;
+                                right: -59px;
+                                top: 0px;
 
+                            .price {
+                                margin: 0;
+                                font-size: 15px;
+                                display: flex;
+                                align-items: flex-end;
+                                padding-bottom: 15px;
+                                padding-right: 20px;  
+                                padding-left: 20px;
+                                background-color: white;
+                            }
+                        
+                            i {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color:white;
+                                background-color: $lightgreen;
+                                border-top-right-radius: 20px;
+                                border-bottom-right-radius: 20px;
+                                font-size: 20px;
+                                height: 69px;
+                                width: 59px;
+                            }
+                        }
+                        &:hover {
+                            .check{ 
+                            animation: check;
+                            animation-duration: 0.5s;
+                            animation-fill-mode: both;
+                            }  
+                            .info-price {
+                                animation: textellipsis;
+                                animation-duration: 0.5s;
+                                animation-fill-mode: both;
+                                }
+                        }
+
+                        .info-price {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+
+                            h3 {
+                                font-size: 18px;
+                                text-align: left;
+                                padding-left: 5px;
+                                margin: 0;
+                                text-overflow: ellipsis;
+                                overflow: hidden;                            
+                                white-space: nowrap;
+                            }   
+
+                            .info {
+                                display: flex;
+                                justify-content: space-between;
+                            
+                                p {
+                                    text-align: left;
+                                    font-size: 15px;
+                                    font-weight: 300;
+                                    padding: 5px;
+                                    margin: 0px;
+                                    text-overflow: ellipsis;
+                                overflow: hidden;                            
+                                white-space: nowrap;
+                                }
+                            }
+                        } 
+                    }
+            }
             .thepinkbutton {
                 padding-top: 40px;
                 padding-bottom: 20px;
+                align-self: center;
             
                 button {
-                    width: 218px;
-                    height: 50px;
+                    cursor: pointer;
+                    padding: 20px 50px 20px 50px;
                     background: $pinkbutton;
                     border: none;
                     border-radius: 60px;
                     margin-bottom: 30px;
                 
                     @include buttonshadow;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
                 
                     span {
                         font-size: 16px;
@@ -157,5 +253,29 @@ body {
                 }
             }
         }  
+    }
+}
+
+// Animation keyframes //
+
+@keyframes apparition {      // Pour que les coeurs se remplissent //
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes check {            // Pour la barre verte lorsqu'on passe la souris sur un plat //
+    0% {
+        right: -59px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+@keyframes textellipsis {      // Pour que le texte des plats rétrécissent quand la souris passe dessus //
+    100% {
+        width : 60%;
     }
 }

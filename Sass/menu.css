@@ -1,8 +1,13 @@
 header {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  background-color: white;
 }
 header .headerlogo {
   width: 197px;
@@ -11,34 +16,15 @@ header .headerlogo {
 }
 
 .header-menu {
-  display: flex;
   flex-direction: row;
-  gap: 60px;
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding: 20px;
   position: relative;
-  z-index: 3;
-  background-color: white;
-}
-.header-menu button {
-  padding-left: 20px;
-  border: none;
-  background-color: white;
 }
 .header-menu i {
   font-size: 25px;
-}
-@media screen and (min-width: 768px) {
-  .header-menu .logo {
-    position: absolute;
-    left: 37%;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .header-menu .logo {
-    position: absolute;
-    left: 42%;
-  }
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 
 footer {
@@ -85,6 +71,7 @@ footer .informations a i.rotate {
     flex-direction: row-reverse;
     gap: 100px;
     padding-right: 50px;
+    align-items: center;
   }
   footer .informations {
     flex-direction: row;
@@ -125,10 +112,20 @@ h1 {
   padding-right: 30px;
   margin: 0 0 0 0;
 }
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 
 h2 {
   font-size: 24px;
   padding-left: 20px;
+}
+@media screen and (min-width: 1025px) {
+  h2 {
+    padding-left: 0px;
+  }
 }
 
 h3 {
@@ -147,18 +144,6 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
-  h1 {
-    font-size: 40px;
-  }
-}
-.title {
-  display: flex;
-  justify-content: space-between;
-}
-.title i {
-  font-size: 20px;
-  padding-right: 30px;
-  align-self: center;
 }
 
 body {
@@ -200,7 +185,8 @@ body .containertwo {
 body .containertwo section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #F6F6F6;
   padding-top: 30px;
   border-top-right-radius: 30px;
@@ -209,19 +195,49 @@ body .containertwo section {
 @media screen and (min-width: 1025px) {
   body .containertwo section {
     width: 1055px;
+    align-items: center;
     margin: auto;
   }
 }
-body .containertwo section .choice {
+body .containertwo section .title {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+}
+@media screen and (min-width: 499px) {
+  body .containertwo section .title {
+    display: flex;
+    justify-content: center;
+  }
+}
+body .containertwo section .title h1 {
+  font-size: 28px;
+}
+body .containertwo section .title .heart {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
 }
 @media screen and (min-width: 1025px) {
-  body .containertwo section .choice {
-    width: 634px;
+  body .containertwo section .title .heart {
+    right: 0px;
   }
+}
+body .containertwo section .title .heart i {
+  font-size: 22px;
+  padding-right: 30px;
+  position: absolute;
+}
+body .containertwo section .title .heart .like {
+  opacity: 0;
+  transition: all 1s;
+}
+body .containertwo section .title .heart .like:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 body .containertwo section h2 {
   font-size: 16px;
@@ -235,68 +251,154 @@ body .containertwo section hr {
   width: 40px;
   text-align: left;
   margin: 0;
+  margin-bottom: 10px;
 }
-body .containertwo section button {
-  background-color: white;
-  width: 349px;
-  height: 69px;
-  border: none;
-  border-radius: 20px;
+body .containertwo section .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 7px;
+}
+@media screen and (min-width: 1025px) {
+  body .containertwo section .menu {
+    width: 634px;
+  }
+}
+body .containertwo section .menu .choice {
+  opacity: 0;
+  animation: apparition;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+body .containertwo section .menu .entrees {
+  animation-delay: 0.5s;
+}
+body .containertwo section .menu .plats {
+  animation-delay: 1s;
+}
+body .containertwo section .menu .desserts {
+  animation-delay: 1.5s;
+}
+body .containertwo section .menu article {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  height: 69px;
+  border: none;
+  padding-left: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
 }
-@media screen and (min-width: 1025px) {
-  body .containertwo section button {
-    width: 100%;
-  }
-}
-body .containertwo section button .info-price {
-  width: 349px;
+body .containertwo section .menu article .check {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  right: -59px;
+  top: 0px;
 }
-@media screen and (min-width: 1025px) {
-  body .containertwo section button .info-price {
-    width: 100%;
-  }
+body .containertwo section .menu article .check .price {
+  margin: 0;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: white;
 }
-body .containertwo section button .info-price .info {
+body .containertwo section .menu article .check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 20px;
+  height: 69px;
+  width: 59px;
+}
+body .containertwo section .menu article:hover .check {
+  animation: check;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+body .containertwo section .menu article:hover .info-price {
+  animation: textellipsis;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+body .containertwo section .menu article .info-price {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-self: center;
-  gap: 5px;
+  justify-content: center;
 }
-body .containertwo section button .info-price .info h3 {
+body .containertwo section .menu article .info-price h3 {
   font-size: 18px;
   text-align: left;
   padding-left: 5px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-body .containertwo section button .info-price .info p {
+body .containertwo section .menu article .info-price .info {
+  display: flex;
+  justify-content: space-between;
+}
+body .containertwo section .menu article .info-price .info p {
   text-align: left;
   font-size: 15px;
   font-weight: 300;
   padding: 5px;
   margin: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 body .containertwo section .thepinkbutton {
   padding-top: 40px;
   padding-bottom: 20px;
+  align-self: center;
 }
 body .containertwo section .thepinkbutton button {
-  width: 218px;
-  height: 50px;
+  cursor: pointer;
+  padding: 20px 50px 20px 50px;
   background: linear-gradient(360deg, rgb(147, 86, 220), rgb(255, 121, 218));
   border: none;
   border-radius: 60px;
   margin-bottom: 30px;
   box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.2);
 }
+body .containertwo section .thepinkbutton button:hover {
+  opacity: 0.7;
+}
 body .containertwo section .thepinkbutton button span {
   font-size: 16px;
   color: white;
   align-self: center;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    right: -59px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes textellipsis {
+  100% {
+    width: 60%;
+  }
 }/*# sourceMappingURL=menu.css.map */

@@ -24,28 +24,31 @@
     background-color: $background;
     padding-top: 50px;
     padding-bottom: 60px;
-}
 
-.thepinkbutton {
-    text-align: center;
-    padding-top: 16px;
-    
-    button {
-        width: 218px;
-        height: 50px;
-        background: $pinkbutton;
-        border: none;
-        border-radius: 60px;
+    .thepinkbutton {
+        text-align: center;
         
-        @include buttonshadow;
-       
-        span {
-            font-size: 16px;
-            color: white;
+        button{
+            border: none;
+            background: $pinkbutton;
+            padding: 20px;
+            border-radius: 60px;
+            opacity: 1;
+            @include buttonshadow;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        
+            
+            span {
+                font-size: 16px;
+                color: white;      
+            }
         }
     }
 }
-
 
 
 /* Partie fonctionnement */
@@ -55,6 +58,11 @@
 
     .fonctionnementdesktop {
         padding: 20px;
+
+        @media screen and (min-width: 1025px) {
+            display: flex;
+            gap: 30px;
+        }
 
         .buttonmenu {
             display: flex;
@@ -106,10 +114,25 @@
     padding-left: 10px;
     padding-right: 10px;
 
+    .restaurantsdesktop {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        @media screen and (min-width: 1025px){
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 50px;
+            } 
+    }  
+
     a {
         width: 100%;
+        background-color: white;
+        border-radius: 20px;
         @include restaurant;
         position: relative;
+        
 
         img {
             object-fit: cover;
@@ -134,57 +157,47 @@
                 right: 15px;
                 top: 15px;
         }
-
-        article {
+              
+        .card {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cardtxt {
             display: flex;
             flex-direction: column;
-            background-color: white;
-            border-radius: 20px;
-            margin-bottom: 20px;
             
-            .card {
-                display: flex;
-                justify-content: space-between;
+            gap: 5px;
+            padding-top: 10px;
+            padding-left: 20px;   
+            padding-bottom: 10px;
+            h4 {
+                font-size: 18px;
+                margin: 0 0 0 0;
             }
-            .cardtxt {
-                display: flex;
-                flex-direction: column;
-                
-                gap: 5px;
-                padding-top: 10px;
-                padding-left: 20px;   
-                padding-bottom: 10px;
-
-                h4 {
-                    font-size: 18px;
-                    margin: 0 0 0 0;
-                }
-            }
-
+        }
+        
+        .heart {
+            align-self: center;
+            position: absolute;
+                right: 50px;
+                bottom: 45px;
+            
             i {
-                font-size: 20px;
-                align-self: center;
+                font-size: 22px;
                 padding-right: 30px;
+                position: absolute;
             }
-        } 
+            .like {
+               opacity: 0; 
+               transition: all 1s;
+
+               &:hover {
+                opacity: 1;
+                color: transparent;
+                background-image: $heart;
+                background-clip: text;
+               }                
+            }
+        }
     }
 }
-
-@media screen and (min-width: 1025px) {
-
-    
-    .fonctionnementdesktop {
-        display: flex;
-        gap: 30px;
-    }
-
-    .restaurants {
-    
-        .restaurantsdesktop {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }  
-    }       
-}
-    

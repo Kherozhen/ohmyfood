@@ -3,8 +3,8 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 1;
-  /* animation du loader pour qu'il reste que 3s */
+  z-index: 2;
+  /* animation du loader pour qu'il reste que 1s */
   animation: appear; /* on appelle la keyframes*/
   animation-delay: 3s; /* on met le temps de l'animation */
   animation-fill-mode: both; /*cette commande permet d'activer l'animation*/
@@ -40,18 +40,23 @@
     transform: rotate(360deg);
   }
 }
-/* keyframes pour faire disparaitre le loader au bout de 3s*/
+/* keyframes pour faire disparaitre le loader au bout de 1s*/
 @keyframes appear {
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
 header {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  background-color: white;
 }
 header .headerlogo {
   width: 197px;
@@ -60,34 +65,15 @@ header .headerlogo {
 }
 
 .header-menu {
-  display: flex;
   flex-direction: row;
-  gap: 60px;
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding: 20px;
   position: relative;
-  z-index: 3;
-  background-color: white;
-}
-.header-menu button {
-  padding-left: 20px;
-  border: none;
-  background-color: white;
 }
 .header-menu i {
   font-size: 25px;
-}
-@media screen and (min-width: 768px) {
-  .header-menu .logo {
-    position: absolute;
-    left: 37%;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .header-menu .logo {
-    position: absolute;
-    left: 42%;
-  }
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 
 footer {
@@ -134,6 +120,7 @@ footer .informations a i.rotate {
     flex-direction: row-reverse;
     gap: 100px;
     padding-right: 50px;
+    align-items: center;
   }
   footer .informations {
     flex-direction: row;
@@ -163,20 +150,22 @@ footer .informations a i.rotate {
   padding-top: 50px;
   padding-bottom: 60px;
 }
-
-.thepinkbutton {
+.explorer .thepinkbutton {
   text-align: center;
-  padding-top: 16px;
 }
-.thepinkbutton button {
-  width: 218px;
-  height: 50px;
-  background: linear-gradient(360deg, rgb(147, 86, 220), rgb(255, 121, 218));
+.explorer .thepinkbutton button {
   border: none;
+  background: linear-gradient(360deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  padding: 20px;
   border-radius: 60px;
+  opacity: 1;
   box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-.thepinkbutton button span {
+.explorer .thepinkbutton button:hover {
+  opacity: 0.7;
+}
+.explorer .thepinkbutton button span {
   font-size: 16px;
   color: white;
 }
@@ -187,6 +176,12 @@ footer .informations a i.rotate {
 }
 .fonctionnement .fonctionnementdesktop {
   padding: 20px;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement .fonctionnementdesktop {
+    display: flex;
+    gap: 30px;
+  }
 }
 .fonctionnement .fonctionnementdesktop .buttonmenu {
   display: flex;
@@ -231,8 +226,23 @@ footer .informations a i.rotate {
   padding-left: 10px;
   padding-right: 10px;
 }
+.restaurants .restaurantsdesktop {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 1025px) {
+  .restaurants .restaurantsdesktop {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+  }
+}
 .restaurants a {
   width: 100%;
+  background-color: white;
+  border-radius: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
   position: relative;
 }
@@ -256,18 +266,11 @@ footer .informations a i.rotate {
   right: 15px;
   top: 15px;
 }
-.restaurants a article {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-.restaurants a article .card {
+.restaurants a .card {
   display: flex;
   justify-content: space-between;
 }
-.restaurants a article .cardtxt {
+.restaurants a .cardtxt {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -275,27 +278,33 @@ footer .informations a i.rotate {
   padding-left: 20px;
   padding-bottom: 10px;
 }
-.restaurants a article .cardtxt h4 {
+.restaurants a .cardtxt h4 {
   font-size: 18px;
   margin: 0 0 0 0;
 }
-.restaurants a article i {
-  font-size: 20px;
+.restaurants a .heart {
   align-self: center;
+  position: absolute;
+  right: 50px;
+  bottom: 45px;
+}
+.restaurants a .heart i {
+  font-size: 22px;
   padding-right: 30px;
+  position: absolute;
+}
+.restaurants a .heart .like {
+  opacity: 0;
+  transition: all 1s;
+}
+.restaurants a .heart .like:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
-@media screen and (min-width: 1025px) {
-  .fonctionnementdesktop {
-    display: flex;
-    gap: 30px;
-  }
-  .restaurants .restaurantsdesktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -330,10 +339,20 @@ h1 {
   padding-right: 30px;
   margin: 0 0 0 0;
 }
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 
 h2 {
   font-size: 24px;
   padding-left: 20px;
+}
+@media screen and (min-width: 1025px) {
+  h2 {
+    padding-left: 0px;
+  }
 }
 
 h3 {
@@ -351,8 +370,5 @@ p {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-  }
-  h1 {
-    font-size: 40px;
   }
 }/*# sourceMappingURL=main.css.map */

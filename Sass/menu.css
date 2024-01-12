@@ -279,6 +279,7 @@ body .containertwo section .menu .desserts {
   animation-delay: 1.5s;
 }
 body .containertwo section .menu article {
+  cursor: pointer;
   display: flex;
   align-items: center;
   position: relative;
